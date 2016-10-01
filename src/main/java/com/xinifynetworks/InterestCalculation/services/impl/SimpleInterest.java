@@ -7,16 +7,6 @@ import com.xinifynetworks.InterestCalculation.services.ISimpleInterest;
 
 public class SimpleInterest implements ISimpleInterest {
 
-	private Locale locale;
-
-	public Locale getLocale() {
-		return locale;
-	}
-
-	public void setLocale(Locale locale) {
-		this.locale = locale;
-	}
-
 	public String formattedCurrency(double amount) {
 		return this.formattedCurrency(amount, Locale.getDefault());
 	}
