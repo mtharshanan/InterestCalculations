@@ -10,12 +10,17 @@ public class App {
 		float annualRate = 5;
 
 		SimpleInterest annualSimpleInterest = new SimpleInterest();
-		
-		System.out.println("Annual Simple Interest: " + annualSimpleInterest
+
+		System.out.println("Annual Simple Interest (Unformatted): "
+				+ annualSimpleInterest.yearlySimpleInterest(principal, annualRate));
+		System.out.println("Monthly Simple Interest (Unformatted): "
+				+ annualSimpleInterest.monthlySimpleInterest(principal, annualRate));
+
+		System.out.println("\nFormatted Annual Simple Interest: " + annualSimpleInterest
 				.formattedCurrency(annualSimpleInterest.yearlySimpleInterest(principal, annualRate)));
-		System.out.println("Monthly Simple Interest: " + annualSimpleInterest
+		System.out.println("Formatted Monthly Simple Interest: " + annualSimpleInterest
 				.formattedCurrency(annualSimpleInterest.monthlySimpleInterest(principal, annualRate), Locale.UK));
-		System.out.println("Daily Simple Interest: " + annualSimpleInterest
+		System.out.println("Formatted Daily Simple Interest: " + annualSimpleInterest
 				.formattedCurrency(annualSimpleInterest.perDiemSimpleInterest(principal, annualRate), Locale.CHINA));
 	}
 }
